@@ -1,0 +1,40 @@
+<h1>{{heading}}</h1>
+<!-- <table border="1" cellPadding="20">
+    <tr>
+        <th>S:NO</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of productArr">
+        <td>{{1}}</td>
+        <td>{{items.productName}}</td>
+        <td>{{items.productPrice}}</td>
+        <td>
+            <button type="button">Edit</button>
+            <button type="button">Delete</button>
+        </td>
+    </tr>
+</table> -->
+
+
+
+<table border="1" cellPadding="20">
+    <tr>
+        <th>S:NO</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of this.productRes;let i=index">  
+        <td>{{i+1}}</td>
+        <td>{{items.productname}}</td>
+        <td>{{items.price}}</td>
+        <td>
+            <button type="button" (click)="edit()">Edit</button>
+            <button type="button" (click)="delete(items._id)">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<!-- <button type="button" (click)="displayProduct()">Display</button> -->
