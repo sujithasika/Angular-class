@@ -1,0 +1,12 @@
+<h1> customerdetails</h1>
+<form [formGroup]="customerForm">
+    <label for="name">Name:</label> <input type="text" formControlName="name"><br><br>
+    
+    <label for="email">Email:</label> <input type="email" formControlName="email"><br><br>
+
+    <label for="password">password:</label> <input type="password" formControlName="password"><br><br>
+    
+    <label for="address">address:</label><br><textarea rows="4" cols="50" formControlName="address"></textarea><br>
+    
+    <input type="submit" value="Submit" (click)="submit()">
+</form>

@@ -15,4 +15,8 @@ export class ApiService {
   deleteproduct(id:any){
     return this.http.delete("http://localhost:3000/prod/delete/product/" + id);
   }
+  submitcustomer(body:any){
+    return this.http.post("http://localhost:3000/prod/prod1/customer",body)
+  }
 }
+
